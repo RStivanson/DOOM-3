@@ -57,7 +57,7 @@ public:
 	const type &		GetStartValue( void ) const { return startValue; }
 	const type &		GetEndValue( void ) const { return endValue; }
 
-private:
+//_private:
 	float				startTime;
 	float				duration;
 	type				startValue;
@@ -148,7 +148,7 @@ public:
 	const type &		GetStartValue( void ) const { return startValue; }
 	const type &		GetEndValue( void ) const { return endValue; }
 
-private:
+//_private:
 	float				startTime;
 	float				accelTime;
 	float				linearTime;
@@ -297,7 +297,7 @@ public:
 	const type &		GetStartValue( void ) const { return startValue; }
 	const type &		GetEndValue( void ) const { return endValue; }
 
-private:
+//_private:
 	float				startTime;
 	float				accelTime;
 	float				linearTime;

@@ -51,8 +51,11 @@ If you have questions concerning this license or the applicable additional terms
 
 #ifdef ID_DEBUG_UNINITIALIZED_MEMORY
 // This is real evil but allows the code to inspect arbitrary class variables.
-#define private		public
-#define protected	public
+#define _private	public
+#define _protected	public
+#else
+#define _private	private
+#define _protected	protected
 #endif
 
 extern idRenderWorld *				gameRenderWorld;
@@ -205,7 +208,7 @@ public:
 
 	entityNetEvent_t *		Start( void ) { return start; }
 
-private:
+_private:
 	entityNetEvent_t *					start;
 	entityNetEvent_t *					end;
 	idBlockAlloc<entityNetEvent_t,32>	eventAllocator;
@@ -233,7 +236,7 @@ public:
 	type *					GetEntity( void ) const;
 	int						GetEntityNum( void ) const;
 
-private:
+_private:
 	int						spawnId;
 };
 
@@ -467,7 +470,7 @@ public:
 
 	bool					NeedRestart();
 
-private:
+_private:
 	const static int		INITIAL_SPAWN_COUNT = 1;
 
 	idStr					mapFileName;			// name of the map, empty string if no map loaded

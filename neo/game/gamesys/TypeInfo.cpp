@@ -27,8 +27,8 @@ If you have questions concerning this license or the applicable additional terms
 */
 
 // This is real evil but allows the code to inspect arbitrary class variables.
-#define private		public
-#define protected	public
+#define _private		public
+#define _protected	public
 
 #include "../../idlib/precompiled.h"
 #pragma hdrstop
@@ -59,7 +59,7 @@ public:
 	static void						WriteGameState( const char *fileName );
 	static void						CompareGameState( const char *fileName );
 
-private:
+_private:
 	static idFile *					fp;
 	static int						initValue;
 	static WriteVariableType_t		Write;
